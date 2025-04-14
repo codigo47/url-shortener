@@ -1,0 +1,35 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type AuthResponse {
+  email: String!
+  token: String!
+}
+
+type CreateShortUrlResponse {
+  slug: String!
+}
+
+type ModifySlugResponse {
+  newSlug: String!
+  slug: String!
+  targetUrl: String!
+}
+
+type Mutation {
+  createShortUrl(targetUrl: String!): CreateShortUrlResponse!
+  login(email: String!, password: String!): AuthResponse!
+  modifySlug(newSlug: String!, slug: String!): ModifySlugResponse!
+  signup(email: String!, password: String!): AuthResponse!
+}
+
+type Query {
+  getShortUrlsByUser: [ShortUrlResponse!]!
+}
+
+type ShortUrlResponse {
+  slug: String!
+  targetUrl: String!
+  visits: Float!
+}
