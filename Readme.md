@@ -1,4 +1,4 @@
-# DeepOrigin URL Shortener
+# URL Shortener
 
 A modern URL shortening service built with a microservices architecture.
 
